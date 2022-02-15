@@ -5,7 +5,7 @@ npm i
 ```
 2. start the project
 ```shell
-npm start
+npm run dev
 ```
 3. for build html static files.
 ```shell
