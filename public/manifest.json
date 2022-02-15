@@ -1,0 +1,14 @@
+{
+  "short_name": "โรงเรียนวิสุทธรังษี",
+  "name": "โรงเรียนวิสุทธรังษี จังหวัดกาญจนบุรี",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "64x64 32x32 24x24 16x16"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00506B",
+  "background_color": "#ffffff"
+}

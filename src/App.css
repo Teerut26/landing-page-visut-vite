@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+	font-family: 'Noto Sans Thai', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	position: absolute;
+
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #cbcbcb6c;
+	border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #909090;
+	border-radius: 12px;
+}
+
+.w-new {
+	width: 295px !important
+}
+
+.animation-blink {
+	-webkit-animation: blinker 1s linear infinite;
+	animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+	50% {
+		opacity: 0
+	}
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0
+	}
+}
