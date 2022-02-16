@@ -1,4 +1,5 @@
-import React from "react";
+import { useState } from "react";
+import GitInfo from "./Footer/GitInfo";
 
 const IconSocialMedia = ({ icon, href }) => {
   return (
@@ -11,12 +12,16 @@ const IconSocialMedia = ({ icon, href }) => {
 };
 
 export default function Footer() {
+  const [ShowGitInfo, setShowGitInfo] = useState(false);
   return (
     <>
       <div className="w-full bg-primary1 text-white py-3 bg-gradient-to-r from-primary1 to-primary2">
         <div className="max-w-4xl lg:max-w-7xl mx-auto px-5 md:px-10 flex flex-col sm2:flex-row justify-center sm2:justify-between h-full items-start sm2:items-center gap-4 duration-500">
           <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
+            <div
+              onDoubleClick={() => setShowGitInfo(!ShowGitInfo)}
+              className="flex items-center gap-2"
+            >
               <img
                 className="w-[40px] md:w-[50px] duration-500"
                 src="/icon.svg"
@@ -50,6 +55,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {ShowGitInfo ? <GitInfo /> : ""}
     </>
   );
 }
