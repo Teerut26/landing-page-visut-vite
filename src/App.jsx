@@ -1,18 +1,39 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import Footer from "./components/Footer";
+import NET from "vanta/dist/vanta.net.min.js";
 
 function App() {
-  const [LogooadSuccess, setLogoloadSuccess] = useState(false)
+  const [LogooadSuccess, setLogoloadSuccess] = useState(false);
+
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    NET({
+      el: vantaRef.current,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      color: 0xffe005,
+      backgroundColor: 0x141400,
+      showDots: false,
+    });
+    return () => {
+      vantaRef.current = null;
+    };
+  }, []);
+
   return (
     <>
-      <div className="bg-gradient-to-b from-secondary1/30 to-secondary1/5 h-screen">
+      <div ref={vantaRef} className=" bg-black h-screen">
         <div className="h-full relative">
-          <div className="flex flex-col select-none h-full items-center justify-center duration-500 gap-3 md:gap-4 lg:gap-6 animate__animated animate__fadeIn ">
+          <div className="flex flex-col bg-title select-none h-full items-center justify-center duration-500 gap-3 md:gap-4 lg:gap-6 animate__animated animate__fadeIn ">
             <div
               className={`duration-150 w-[8rem] md:w-[9rem] lg:w-[10rem] h-[10rem] md:h-[11rem] lg:h-[12rem] ${
-                LogooadSuccess ? "" : "blur-lg bg-yellow-200 rounded-full"
+                LogooadSuccess ? "" : "blur-lg bg-yellow-200/30 rounded-full"
               }`}
             >
               <img
@@ -22,11 +43,11 @@ function App() {
                 alt="visut logo"
               />
             </div>
-            <div className="flex flex-col text-center">
-              <div className="font-bold duration-500 text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary1 to-primary2">
+            <div className="flex flex-col text-center ">
+              <div className="font-bold duration-500 text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent text-white ">
                 โรงเรียนวิสุทธรังษี
               </div>
-              <div className="text-2xl md:text-3xl duration-500 lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-primary1 to-primary2">
+              <div className="text-2xl md:text-3xl duration-500 lg:text-4xl bg-clip-text text-transparent text-white">
                 Visuttharangsi School
               </div>
             </div>
