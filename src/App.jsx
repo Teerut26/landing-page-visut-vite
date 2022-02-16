@@ -47,11 +47,11 @@ function App() {
               />
             </div>
             <div className="flex flex-col text-center ">
-              <div className="font-bold duration-500 text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent text-white ">
-                โรงเรียนวิสุทธรังษี
+              <div className="font-bold duration-500 text-2xl md:text-4xl lg:text-5xl bg-clip-text text-transparent text-white ">
+                โรงเรียนวิสุทธรังษี จังหวัดกาญจนบุรี
               </div>
-              <div className="text-2xl md:text-3xl duration-500 lg:text-4xl bg-clip-text text-transparent text-white">
-                Visuttharangsi School
+              <div className="text-xl md:text-3xl duration-500 lg:text-4xl bg-clip-text text-transparent text-white">
+                Visuttharangsi Kanchanaburi School
               </div>
             </div>
             <a

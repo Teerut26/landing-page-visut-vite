@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GitInfo from "./Footer/GitInfo";
+// import GitInfo from "./Footer/GitInfo";
 
 const IconSocialMedia = ({ icon, href }) => {
   return (
@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <>
       <div className="w-full bg-primary1 text-white py-3 bg-gradient-to-r from-primary1 to-primary2">
-        <div className="max-w-4xl lg:max-w-7xl mx-auto px-5 md:px-10 flex flex-col sm2:flex-row justify-center sm2:justify-between h-full items-start sm2:items-center gap-4 duration-500">
+        <div className="max-w-4xl lg:max-w-7xl mx-auto px-5 md:px-10 flex flex-col md:flex-row justify-center sm2:justify-between h-full items-start sm2:items-center gap-4 duration-500">
           <div className="flex flex-col gap-2">
             <div
               onDoubleClick={() => setShowGitInfo(!ShowGitInfo)}
@@ -28,8 +28,8 @@ export default function Footer() {
                 alt="visut logo"
               />
               <div>
-                <div>โรงเรียนวิสุทธรังษี</div>
-                <div>Visuttharangsi School</div>
+                <div>โรงเรียนวิสุทธรังษี จังหวัดกาญจนบุรี</div>
+                <div>Visuttharangsi Kanchanaburi School</div>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {ShowGitInfo ? <GitInfo /> : ""}
+      {/* {ShowGitInfo ? <GitInfo /> : ""} */}
     </>
   );
 }
