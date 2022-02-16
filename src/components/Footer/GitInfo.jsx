@@ -13,11 +13,11 @@ const Commit = ({ sha, commit, html_url, author, committer }) => {
             />
           </div>
           <div className="flex flex-col">
-            <div className="font-bold">{author.login}</div>
-            <div className="text-sm font-bold">{new Date(commit.committer.date).toLocaleString("th-TH")}</div>
+            <div className="font-bold text-gray-600">{author.login}</div>
+            <div className="text-sm font-bold text-gray-600">{new Date(commit.committer.date).toLocaleString("th-TH")}</div>
           </div>
         </div>
-        <div className="text-lg">{commit.message}</div>
+        <div className="text-lg ">{commit.message}</div>
       </div>
     </a>
   );
@@ -41,7 +41,7 @@ export default function GitInfo() {
   }
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md mx-auto px-2 md:px-0 ">
       <div className="flex gap-1 p-2 justify-center">
         <div className="flex bg-rose-500 text-white px-3 py-1 items-center justify-center rounded-xl gap-2">
           <div>
